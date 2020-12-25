@@ -78,7 +78,7 @@ public class Day11 extends AOCRiddle {
             }
         }
 
-        // upleft
+        // up left
         for(int i = 1; (x - i >= 0) && (y - i >= 0); i++){
             char c = rows[x - i].charAt(y - i);
             if(c == '#'){
@@ -98,7 +98,7 @@ public class Day11 extends AOCRiddle {
                 break;
             }
         }
-        // downleft
+        // down left
         for(int i = 1; (x + i < rows.length) && (y - i >= 0); i++){
             char c = rows[x + i].charAt(y - i);
             if(c == '#'){

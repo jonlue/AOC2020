@@ -30,7 +30,7 @@ public class Day10 extends AOCRiddle {
 
         long variants = 1;
         for(List<Integer> t : subLists){
-            variants *= fiboSimilar(t.size());
+            variants *= countDifferentPossibilities(t.size());
         }
         return String.valueOf(variants);
     }
@@ -49,12 +49,12 @@ public class Day10 extends AOCRiddle {
 
 
 
-    private int fiboSimilar(int times){
+    private int countDifferentPossibilities(int times){
         //untested above 6
         if(times < 1) return 0;
         if(times == 1 ||times == 2) return 1;
 
-        return fiboSimilar(times-1) + fiboSimilar(times-2) + fiboSimilar(times-3);
+        return countDifferentPossibilities(times-1) + countDifferentPossibilities(times-2) + countDifferentPossibilities(times-3);
     }
 
     private int countDifferences(List<Integer> lst, int difference){

@@ -18,11 +18,9 @@ public class Day20 extends AOCRiddle {
     private final int image_length;
 
     private Map<Integer, List<String[]>> images;
-    private LinkedList<String[]> imageArray = new LinkedList<>();
-    private LinkedList<Integer> imageId = new LinkedList<>();
+    private final LinkedList<String[]> imageArray = new LinkedList<>();
+    private final LinkedList<Integer> imageId = new LinkedList<>();
     private String[] finalImage;
-    private int tile_length;
-
 
     @Override
     protected String solve1() {
@@ -230,7 +228,6 @@ public class Day20 extends AOCRiddle {
             // normal
 
             String[] image = getImage(lines);
-            tile_length = image[0].length();
             imagePossibilities.add(image);
             String[] rotated = new String[image.length];
             System.arraycopy(image,0,rotated,0,image.length);

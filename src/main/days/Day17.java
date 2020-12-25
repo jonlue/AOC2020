@@ -13,10 +13,10 @@ public class Day17 extends AOCRiddle {
     private static final char ACTIVE = '#';
     private static final char INACTIVE = '.';
 
-    private char[][][] cube = new char[SIZE][SIZE][SIZE];
-    private char[][][][] hCube = new char[SIZE][SIZE][SIZE][SIZE];
-    private short[][][] cubeNeighbors = new short[SIZE][SIZE][SIZE];
-    private short[][][][] hCubeNeighbors = new short[SIZE][SIZE][SIZE][SIZE];
+    private final char[][][] cube = new char[SIZE][SIZE][SIZE];
+    private final char[][][][] hCube = new char[SIZE][SIZE][SIZE][SIZE];
+    private final short[][][] cubeNeighbors = new short[SIZE][SIZE][SIZE];
+    private final short[][][][] hCubeNeighbors = new short[SIZE][SIZE][SIZE][SIZE];
 
     @Override
     protected String solve1() {
@@ -175,7 +175,6 @@ public class Day17 extends AOCRiddle {
 
     private void parse(){
         int i = START_SLICE;
-        int w = START_SLICE;
         for(String s : getInput().split("\n")){
             int j = START_SLICE;
             for(char c : s.toCharArray()){

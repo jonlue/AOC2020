@@ -13,7 +13,6 @@ public class Day13 extends AOCRiddle {
 
     private int timeStamp;
     private List<Integer> busses;
-    private static final long START_VALUE = 100000000000000L;
 
     @Override
     protected String solve1() {

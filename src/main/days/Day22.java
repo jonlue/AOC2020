@@ -12,7 +12,6 @@ public class Day22 extends AOCRiddle {
 
     private LinkedList<Integer> playerOne;
     private LinkedList<Integer> playerTwo;
-    private Set<List<LinkedList<Integer>>> rounds;
 
     @Override
     protected String solve1() {
